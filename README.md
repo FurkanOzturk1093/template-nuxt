@@ -1,75 +1,46 @@
-# Nuxt Minimal Starter
+# DeployWise — Nuxt Template
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A production-ready Nuxt 3 starter, pre-configured for one-click deployment to your VPS with [DeployWise](https://deploywise.dev).
 
-## Setup
+## What's Included
 
-Make sure to install dependencies:
+- Nuxt 3 with auto-imports and TypeScript
+- SSR and static generation support
+- Optimized for PM2 + Nginx deployment
+
+## Quick Start
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+Open [http://localhost:3000](http://localhost:3000).
 
-Build the application for production:
+## Deploy with DeployWise
 
-```bash
-# npm
-npm run build
+1. Push this repo to GitHub
+2. Open [deploywise.dev/dashboard](https://deploywise.dev/dashboard)
+3. Add your VPS → Create a project → Select this repo
+4. Click **Deploy**
 
-# pnpm
-pnpm build
+DeployWise automatically runs `nuxt build`, starts with PM2 (`.output/server/index.mjs`), configures Nginx, and issues a free SSL certificate.
 
-# yarn
-yarn build
+## Project Structure
 
-# bun
-bun run build
+```
+├── app.vue           # Root component
+├── nuxt.config.ts    # Nuxt configuration
+├── public/           # Static assets
+└── package.json
 ```
 
-Locally preview production build:
+## Learn More
 
-```bash
-# npm
-npm run preview
+- [Deploy Nuxt to VPS Guide](https://deploywise.dev/guides/deploy-nuxt-to-vps)
+- [DeployWise Docs](https://deploywise.dev/docs)
+- [Nuxt Documentation](https://nuxt.com/docs)
 
-# pnpm
-pnpm preview
+---
 
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Deployed with [DeployWise](https://deploywise.dev) — free, open source.
